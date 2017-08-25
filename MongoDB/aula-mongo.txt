@@ -1,0 +1,39 @@
+
+EXPORT COLLECTION :
+
+mongoexport --db [nome_do_database] --collection [nome_da_colecao] --out [minha_colecao.json]
+
+--------------------------------------------------------------------------------------
+
+IMPORT COLLECTION : 
+
+mongoimport --db [nome_do_database] --collection [nome_da_colecao] --drop --file [data.json]
+mongoimport --db aula-mongo --collection restaurantes --drop --file restaurantes.json
+
+--------------------------------------------------------------------------------------
+
+OTHERS COMMANDS :
+
+show db
+show collections
+
+SELECT : 	db[collection].find([object]).count();
+			db[collection].findOne([object]);
+INSERT : 	db[collection].insert([object]);
+			db[collection].save([object]);
+
+--------------------------------------------------------------------------------------
+
+CURSOR : 
+
+let cur = db[collection].find([object]);
+while(cur.hasNext()){
+	console.log(cur.next())
+}
+
+
+--------------------------------------------------------------------------------------
+
+REFERENCES :
+
+db.createCollection(): https://docs.mongodb.com/manual/reference/method/db.createCollection/index.html

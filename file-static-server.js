@@ -25,7 +25,7 @@ http.createServer((req, resp) => {
 		if(err.code == 'ENOENT'){
 			console.log('ERRO = ', err)
 			console.log('------ 404 FILE NOT FOUND ------')
-			resp.writeHead(404, ContentType.JSON)
+			resp.writeHead(404, contentTypeMap.JSON)
 			resp.write(JSON.stringify({'message':'Página não encontrada'}))
 		}else{
 			console.log('ERRO = ', err)
@@ -34,7 +34,7 @@ http.createServer((req, resp) => {
 		resp.end()
 	}
 
-}).listen(config.port, () => console.log('Server runing in port : ', config.port))
+}).listen(config.port,  () => console.log('Server runing in port : ', config.port))
 
 function validateContentType(contentType){
 	if(!contentType){
@@ -64,7 +64,7 @@ function ContentTypeText(pType, pCharset){
 	return {'Content-Type': type + charset }
 }
 
-const contentTypeMa = {
+const contentTypeMap = {
 	'aac':'audio/aac',
 	'abw':'application/x-abiword',
 	'arc':'application/octet-stream',
