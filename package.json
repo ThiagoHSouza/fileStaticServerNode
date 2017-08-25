@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "File Static Server",
+  "main": "file-static-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoHSouza/fileStaticServerNode.git"
+  },
+  "author": "Thiago H Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoHSouza/fileStaticServerNode/issues"
+  },
+  "homepage": "https://github.com/ThiagoHSouza/fileStaticServerNode#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
